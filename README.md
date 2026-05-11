@@ -16,17 +16,26 @@ After a run, the script prints counts for `um` removals, `uh` removals, and `I` 
 
 Python 3 (standard library only: `argparse`, `pathlib`, `re`).
 
+## How to run
+
+1. Put your WebVTT file in the **`vtt_files/`** folder.
+2. From the **project root** (`caption-cleaner/`), run the script with the path to that file.
+
 ## Usage
 
-```bash
-python script/caption_cleaner.py path/to/captions.vtt
-```
-
-Write to another file instead of overwriting:
+Process a file in `vtt_files/` (overwrites the input file by default):
 
 ```bash
-python script/caption_cleaner.py path/to/captions.vtt -o path/to/captions.cleaned.vtt
+python script/caption_cleaner.py vtt_files/your_captions.vtt
 ```
+
+Write a new file instead of overwriting the original:
+
+```bash
+python script/caption_cleaner.py vtt_files/your_captions.vtt -o vtt_files/your_captions.cleaned.vtt
+```
+
+Replace `your_captions.vtt` with your actual filename. You can still pass any path to a `.vtt` file if you prefer not to use `vtt_files/`.
 
 ## Credits
 
